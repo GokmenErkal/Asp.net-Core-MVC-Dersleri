@@ -1,0 +1,41 @@
+﻿@model List<ilk.Models.Kitap>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index3</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h2>Merhaba Kitap Sayfamıza Hoşgeldiniz</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kitap Adı</th>
+                    <th>Yazar</th>
+                </tr>
+            </thead>
+            @foreach (var k in Model)
+            {
+
+                <tbody>
+                    <tr>
+                        <td>@k.ID</td>
+                        <td>@k.KitapAd</td>
+                        <td>@k.Yazar</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+        <button class="btn btn-warning text-white flex-re">Tablo Listesi</button>
+    </div>
+</body>
+</html>
